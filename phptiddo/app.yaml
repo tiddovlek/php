@@ -1,0 +1,53 @@
+application: phptiddo
+version: 1
+runtime: php55
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /opdracht4\.jpg
+  static_files: opdracht4.jpg
+  upload: opdracht4\.jpg
+  
+  
+- url: /(.+\.(gif|png|jpg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg)$
+  application_readable: true
+
+- url: /
+  script: helloworld.php
+  
+- url: /busrijs
+  script: busrijs.php
+
+- url: /foutmelding
+  script: foutmelding.php
+    
+- url: /kerstboom
+  script: kerstboom.php
+  
+- url: /zwemles
+  script: zwemles.php
+  
+- url: /mystyle
+  script: mystyle.php
+  
+- url: /kapperzaak
+  script: kapperzaak.php
+  
+- url: /autobedrijf
+  script: autobedrijf.php
+  
+- url: /functie
+  script: functie.php
+  
+- url: /autolijst
+  script: autolijst.php
+  
+- url: /auto
+  script: auto.php
